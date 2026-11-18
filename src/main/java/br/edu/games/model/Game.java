@@ -19,7 +19,7 @@ public class Game {
     private Long id;
 
     @NotBlank(message = "Informe o título")
-    @Size(min = 2, max = 80, message = "O título deve conter de 2 a 80 carcateres")
+    @Size(min = 2, max = 80, message = "O título deve conter de 2 a 80 caracteres")
     @Column(nullable = false, length = 80)
     private String titulo;
 
@@ -32,7 +32,7 @@ public class Game {
     private BigDecimal valorGame;
 
     @NotNull(message = "A quantidade em estoque é obrigatória")
-    @PositiveOrZero(message = "A quantidade deve ser maior que 0")
+    @PositiveOrZero(message = "A quantidade não pode ser negativa")
     private Integer estoque;
 
 }
