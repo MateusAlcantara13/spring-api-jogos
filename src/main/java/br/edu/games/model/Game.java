@@ -35,4 +35,16 @@ public class Game {
     @PositiveOrZero(message = "A quantidade não pode ser negativa")
     private Integer estoque;
 
+    public boolean temEstoque() {
+        return estoque != null && estoque > 0;
+    }
+
+    public void vender() {
+        estoque--;
+    }
+
+    public void repor() {
+        estoque++;
+    }
+
 }
